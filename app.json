@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "VERITAS Mobile",
+    "slug": "veritas-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/greenIcon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to camera to capture evidence.",
+        "NSMicrophoneUsageDescription": "This app needs access to microphone to record video with audio.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to location to tag evidence with GPS coordinates."
+      },
+      "bundleIdentifier": "com.veritas.mobile",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAPzpxdMMnuY0Fg5Gm7IVrr7-TSLOtEPvc"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2E7D32"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.INTERNET"
+      ],
+      "package": "com.veritas.mobile",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAPzpxdMMnuY0Fg5Gm7IVrr7-TSLOtEPvc"
+        }
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow VERITAS to access your camera to capture evidence.",
+          "microphonePermission": "Allow VERITAS to record audio with videos.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow VERITAS to use your location to tag evidence with GPS coordinates."
+        }
+      ]
+    ],
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}
